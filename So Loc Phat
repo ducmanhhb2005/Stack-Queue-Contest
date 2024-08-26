@@ -1,0 +1,17 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Queue<Integer> queue = new LinkedList<>();
+		queue.add(6);
+		queue.add(8);
+		while (true){
+		    int x=queue.poll();
+		    String tmp=x+"";
+		    if (tmp.length()>=6) break;
+		    queue.add(x*10+6);
+		    queue.add(x*10+8);
+		    System.out.print(x+" ");
+		}
+	}
+}
